@@ -64,7 +64,7 @@ public class ABCheck {
 		return false;
 
 	}
-	
+
 	/**
 	 * Checks if a position exists in a String.
 	 * <br>
