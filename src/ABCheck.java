@@ -42,7 +42,7 @@ public class ABCheck {
 
 	/**
 	 * Checks if two characters
-	 * are separated by exactly 3 places anywhere in the string at least once in the same order.
+	 * are separated by exactly 3 places anywhere in the string at least once in the given order.
 	 * 
 	 * @param str the string to be checked
 	 * @param ch1 the first character
