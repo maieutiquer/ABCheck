@@ -47,7 +47,7 @@ public class ABCheck {
 	 * @param str the string to be checked
 	 * @param ch1 the first character
 	 * @param ch2 the second character
-	 * @return true if the two chars are separated by 3 places anywhere in the same order
+	 * @return true if the two chars are separated by 3 places anywhere in the given order
 	 */
 	private static boolean characterCheck(String str, char ch1, char ch2) {
 
