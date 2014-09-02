@@ -36,26 +36,27 @@ public class ABCheck {
 	 */
 	private static boolean abCheck(String str) {
 
-		return characterCheck(str, 'a', 'b') || characterCheck(str, 'b', 'a');
+		return checkCharacterSeparation(str, 'a', 'b', 4) || checkCharacterSeparation(str, 'b', 'a', 4);
 
 	}
 
 	/**
 	 * Checks if two characters
-	 * are separated by exactly 3 places anywhere in the string at least once in the given order.
+	 * are on a certain distance anywhere in the string at least once in the given order.
 	 * 
 	 * @param str the string to be checked
 	 * @param ch1 the first character
 	 * @param ch2 the second character
+	 * @param distance the distance there should be between the characters 
 	 * @return true if the two chars are separated by 3 places anywhere in the given order
 	 */
-	private static boolean characterCheck(String str, char ch1, char ch2) {
+	private static boolean checkCharacterSeparation(String str, char ch1, char ch2, int distance) {
 
 		for (int i=0; i < str.length(); i++) {
 			if (str.charAt(i) == ch1) {
 				// every time a match is found,
 				// check for the other character after 4 places
-				if (checkBounds(str, i + 4) && str.charAt(i + 4) == ch2) {
+				if (checkBounds(str, i + distance) && str.charAt(i + distance) == ch2) {
 					return true;
 				}
 			}
